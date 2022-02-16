@@ -1,0 +1,14 @@
+WHAT THEY DO NOT WANT YOU TO KNOW
+
+Exibir por região
+Exibir por tipo: Locais Suspeitos/Artefatos sobrenaturais/Criaturas/Fantasmas/Acontecimentos Estranhos/Alienígenas/Serial Killers/
+pessoas cadastradas podem mandar suas historias
+
+Navegação:
+
+pagina home de introdução:
+Explicação e história do site
+Como utilizar o site
+Tipos de Histórias
+
+Header => Página de Explicação de Coletáveis/Página de História dos protagonistas/Página de Mistérios e Lendas/Envio de História/pagina de cadastro/login
