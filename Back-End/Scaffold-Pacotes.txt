@@ -1,0 +1,10 @@
+Scaffold-DbContext "Data Source=NOTE0113B3\SQLEXPRESS; initial catalog=WTDNWYTK; user Id=sa; pwd=Senai@132;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context WTDNWYTKContext -force
+
+Microsoft.AspNetCore.Authentication.JwtBearer
+Microsoft.AspNetCore.Mvc.NewtonsoftJson
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.SqlServer.Design
+Microsoft.EntityFrameworkCore.Tools
+Swashbuckle.AspNetCore
+System.Data.SqlClient
+System.IdentityModel.Tokens.Jwt
