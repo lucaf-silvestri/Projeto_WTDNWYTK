@@ -29,7 +29,7 @@ namespace Projeto_WTDNWYTK.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Data Source=NOTE0113B3\\SQLEXPRESS; initial catalog=WTDNWYTK; user Id=sa; pwd=Senai@132;");
             }
         }
@@ -41,7 +41,7 @@ namespace Projeto_WTDNWYTK.Contexts
             modelBuilder.Entity<Historium>(entity =>
             {
                 entity.HasKey(e => e.IdHistoria)
-                    .HasName("PK__historia__E2A314D3B4ACA6CE");
+                    .HasName("PK__historia__E2A314D38B30FCB4");
 
                 entity.ToTable("historia");
 
@@ -81,11 +81,11 @@ namespace Projeto_WTDNWYTK.Contexts
             modelBuilder.Entity<Regiao>(entity =>
             {
                 entity.HasKey(e => e.IdRegiao)
-                    .HasName("PK__regiao__82DCC78FC0C88C33");
+                    .HasName("PK__regiao__82DCC78F774C3253");
 
                 entity.ToTable("regiao");
 
-                entity.HasIndex(e => e.NomeRegiao, "UQ__regiao__A7C82F39045F98A5")
+                entity.HasIndex(e => e.NomeRegiao, "UQ__regiao__A7C82F39417EF112")
                     .IsUnique();
 
                 entity.Property(e => e.IdRegiao).HasColumnName("idRegiao");
@@ -123,11 +123,11 @@ namespace Projeto_WTDNWYTK.Contexts
             modelBuilder.Entity<Tipo>(entity =>
             {
                 entity.HasKey(e => e.IdTipo)
-                    .HasName("PK__tipo__BDD0DFE14D2F182A");
+                    .HasName("PK__tipo__BDD0DFE113BA20B5");
 
                 entity.ToTable("tipo");
 
-                entity.HasIndex(e => e.NomeTipo, "UQ__tipo__46BB8260727A0B4B")
+                entity.HasIndex(e => e.NomeTipo, "UQ__tipo__46BB82609CA0FDE6")
                     .IsUnique();
 
                 entity.Property(e => e.IdTipo).HasColumnName("idTipo");
@@ -165,11 +165,11 @@ namespace Projeto_WTDNWYTK.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__645723A60594EC2C");
+                    .HasName("PK__usuario__645723A6225B3F21");
 
                 entity.ToTable("usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E6164B5B30FF7")
+                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E6164C92564D1")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");

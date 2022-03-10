@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Projeto_WTDNWYTK</name>
+    </assembly>
+    <members>
+        <member name="T:Projeto_WTDNWYTK.Interfaces.IHistoriaRepository">
+            <summary>
+            Interface responsável pelo repositório HistoriaRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IHistoriaRepository.Listar">
+            <summary>
+            Lista todas as Historias
+            </summary>
+            <returns>Lista de Historias</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IHistoriaRepository.Listarid(System.Int32)">
+            <summary>
+            Busca uma Historia através de seu id
+            </summary>
+            <param name="id">id da Historia buscada</param>
+            <returns>A Historia buscada</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IHistoriaRepository.Cadastrar(Projeto_WTDNWYTK.Domains.Historium)">
+            <summary>
+            Cadastra uma nova Historia
+            </summary>
+            <param name="novaHistoria">Objeto novaHistoria com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IHistoriaRepository.Atualizar(System.Int32,Projeto_WTDNWYTK.Domains.Historium)">
+            <summary>
+            Atualiza uma Historia existente passando o id pela URL da requisição
+            </summary>
+            <param name="idHistoria">id da Historia que será atualizada</param>
+            <param name="HistoriaAtualizada">Objeto HistoriaAtualizada com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IHistoriaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Historia existente
+            </summary>
+            <param name="idHistoria">id da Historia deletada</param>
+        </member>
+        <member name="T:Projeto_WTDNWYTK.Interfaces.IRegiaoHistoriaRepository">
+            <summary>
+            Interface responsável pelo repositório RegiaoHistoriaRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoHistoriaRepository.Listar">
+            <summary>
+            Lista todas as RegiaoHistorias
+            </summary>
+            <returns>Lista de RegiaoHistorias</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoHistoriaRepository.Cadastrar(Projeto_WTDNWYTK.Domains.RegiaoHistorium)">
+            <summary>
+            Cadastra uma nova RegiaoHistoria
+            </summary>
+            <param name="novaRegiaoHistoria">Objeto novaRegiaoHistoria com os novos dados</param>
+        </member>
+        <member name="T:Projeto_WTDNWYTK.Interfaces.IRegiaoRepository">
+            <summary>
+            Interface responsável pelo repositório RegiaoRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoRepository.Listar">
+            <summary>
+            Lista todas as Regioes
+            </summary>
+            <returns>Lista de Regioes</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoRepository.Listarid(System.Int32)">
+            <summary>
+            Busca uma Regiao através de seu id
+            </summary>
+            <param name="id">id da Regiao buscada</param>
+            <returns>A Regiao buscada</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoRepository.Cadastrar(Projeto_WTDNWYTK.Domains.Regiao)">
+            <summary>
+            Cadastra uma nova Regiao
+            </summary>
+            <param name="novaRegiao">Objeto novaRegiao com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoRepository.Atualizar(System.Int32,Projeto_WTDNWYTK.Domains.Regiao)">
+            <summary>
+            Atualiza uma Regiao existente passando o id pela URL da requisição
+            </summary>
+            <param name="idRegiao">id da Regiao que será atualizada</param>
+            <param name="RegiaoAtualizada">Objeto RegiaoAtualizada com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Regiao existente
+            </summary>
+            <param name="idRegiao">id da Regiao deletada</param>
+        </member>
+        <member name="T:Projeto_WTDNWYTK.Interfaces.ITipoHistoriaRepository">
+            <summary>
+            Interface responsável pelo repositório TipoHistoriaRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoHistoriaRepository.Listar">
+            <summary>
+            Lista todos os TipoHistorias
+            </summary>
+            <returns>Lista de TipoHistorias</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoHistoriaRepository.Cadastrar(Projeto_WTDNWYTK.Domains.TipoHistorium)">
+            <summary>
+            Cadastra um novo TipoHistoria
+            </summary>
+            <param name="novoTipoHistoria">Objeto novoTipoHistoria com os novos dados</param>
+        </member>
+        <member name="T:Projeto_WTDNWYTK.Interfaces.ITipoRepository">
+            <summary>
+            Interface responsável pelo repositório TipoRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoRepository.Listar">
+            <summary>
+            Lista todos os Tipos
+            </summary>
+            <returns>Lista de Tipos</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um Tipo através de seu id
+            </summary>
+            <param name="id">id do Tipo buscado</param>
+            <returns>O Tipo buscado</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoRepository.Cadastrar(Projeto_WTDNWYTK.Domains.Tipo)">
+            <summary>
+            Cadastra um novo Tipo
+            </summary>
+            <param name="novoTipo">Objeto novoTipo com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoRepository.Atualizar(System.Int32,Projeto_WTDNWYTK.Domains.Tipo)">
+            <summary>
+            Atualiza um Tipo existente passando o id pela URL da requisição
+            </summary>
+            <param name="idTipo">id do Tipo que será atualizado</param>
+            <param name="TipoAtualizado">Objeto TipoAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Tipo existente
+            </summary>
+            <param name="idTipo">id do Tipo deletado</param>
+        </member>
+        <member name="T:Projeto_WTDNWYTK.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositório UsuarioRepository
+            </summary>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Lista de Usuarios</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IUsuarioRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um Usuario através de seu id
+            </summary>
+            <param name="id">id do Usuario buscado</param>
+            <returns>O Usuario buscado</returns>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IUsuarioRepository.Cadastrar(Projeto_WTDNWYTK.Domains.Usuario)">
+            <summary>
+            Cadastra um novo Usuario
+            </summary>
+            <param name="novoUsuario">Objeto novoUsuario com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IUsuarioRepository.Atualizar(System.Int32,Projeto_WTDNWYTK.Domains.Usuario)">
+            <summary>
+            Atualiza um Usuario existente passando o id pela URL da requisição
+            </summary>
+            <param name="idUsuario">id do Usuario que será atualizado</param>
+            <param name="UsuarioAtualizado">Objeto UsuarioAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Usuario existente
+            </summary>
+            <param name="idUsuario">id do Usuario deletado</param>
+        </member>
+    </members>
+</doc>
