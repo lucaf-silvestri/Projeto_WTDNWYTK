@@ -41,7 +41,7 @@ namespace Projeto_WTDNWYTK.Contexts
             modelBuilder.Entity<Historium>(entity =>
             {
                 entity.HasKey(e => e.IdHistoria)
-                    .HasName("PK__historia__E2A314D38B30FCB4");
+                    .HasName("PK__historia__E2A314D3A4BC168C");
 
                 entity.ToTable("historia");
 
@@ -81,11 +81,11 @@ namespace Projeto_WTDNWYTK.Contexts
             modelBuilder.Entity<Regiao>(entity =>
             {
                 entity.HasKey(e => e.IdRegiao)
-                    .HasName("PK__regiao__82DCC78F774C3253");
+                    .HasName("PK__regiao__82DCC78FF1234D08");
 
                 entity.ToTable("regiao");
 
-                entity.HasIndex(e => e.NomeRegiao, "UQ__regiao__A7C82F39417EF112")
+                entity.HasIndex(e => e.NomeRegiao, "UQ__regiao__A7C82F399A263C09")
                     .IsUnique();
 
                 entity.Property(e => e.IdRegiao).HasColumnName("idRegiao");
@@ -99,35 +99,38 @@ namespace Projeto_WTDNWYTK.Contexts
 
             modelBuilder.Entity<RegiaoHistorium>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.IdRegiaoHistoria)
+                    .HasName("PK__regiaoHi__60E3C30F98AD75D0");
 
                 entity.ToTable("regiaoHistoria");
+
+                entity.Property(e => e.IdRegiaoHistoria).HasColumnName("idRegiaoHistoria");
 
                 entity.Property(e => e.IdHistoria).HasColumnName("idHistoria");
 
                 entity.Property(e => e.IdRegiao).HasColumnName("idRegiao");
 
                 entity.HasOne(d => d.IdHistoriaNavigation)
-                    .WithMany()
+                    .WithMany(p => p.RegiaoHistoria)
                     .HasForeignKey(d => d.IdHistoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__regiaoHis__idHis__31EC6D26");
+                    .HasConstraintName("FK__regiaoHis__idHis__33D4B598");
 
                 entity.HasOne(d => d.IdRegiaoNavigation)
-                    .WithMany()
+                    .WithMany(p => p.RegiaoHistoria)
                     .HasForeignKey(d => d.IdRegiao)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__regiaoHis__idReg__32E0915F");
+                    .HasConstraintName("FK__regiaoHis__idReg__34C8D9D1");
             });
 
             modelBuilder.Entity<Tipo>(entity =>
             {
                 entity.HasKey(e => e.IdTipo)
-                    .HasName("PK__tipo__BDD0DFE113BA20B5");
+                    .HasName("PK__tipo__BDD0DFE16980A815");
 
                 entity.ToTable("tipo");
 
-                entity.HasIndex(e => e.NomeTipo, "UQ__tipo__46BB82609CA0FDE6")
+                entity.HasIndex(e => e.NomeTipo, "UQ__tipo__46BB82607B61F767")
                     .IsUnique();
 
                 entity.Property(e => e.IdTipo).HasColumnName("idTipo");
@@ -141,35 +144,38 @@ namespace Projeto_WTDNWYTK.Contexts
 
             modelBuilder.Entity<TipoHistorium>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.IdTipoHistoria)
+                    .HasName("PK__tipoHist__7556C2A57C1894C1");
 
                 entity.ToTable("tipoHistoria");
+
+                entity.Property(e => e.IdTipoHistoria).HasColumnName("idTipoHistoria");
 
                 entity.Property(e => e.IdHistoria).HasColumnName("idHistoria");
 
                 entity.Property(e => e.IdTipo).HasColumnName("idTipo");
 
                 entity.HasOne(d => d.IdHistoriaNavigation)
-                    .WithMany()
+                    .WithMany(p => p.TipoHistoria)
                     .HasForeignKey(d => d.IdHistoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__tipoHisto__idHis__2F10007B");
+                    .HasConstraintName("FK__tipoHisto__idHis__300424B4");
 
                 entity.HasOne(d => d.IdTipoNavigation)
-                    .WithMany()
+                    .WithMany(p => p.TipoHistoria)
                     .HasForeignKey(d => d.IdTipo)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__tipoHisto__idTip__300424B4");
+                    .HasConstraintName("FK__tipoHisto__idTip__30F848ED");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__645723A6225B3F21");
+                    .HasName("PK__usuario__645723A6B1CF232F");
 
                 entity.ToTable("usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E6164C92564D1")
+                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E616489A5010B")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");

@@ -2,14 +2,15 @@
 	"info": {
 		"_postman_id": "9e792441-1775-4d56-88b5-c2390825b9a4",
 		"name": "Projeto_WTDNWYTK",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17689875"
 	},
 	"item": [
 		{
-			"name": "Usuarios",
+			"name": "CRUD",
 			"item": [
 				{
-					"name": "Usuarios.Listar",
+					"name": "Listar",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -29,7 +30,7 @@
 					"response": []
 				},
 				{
-					"name": "Usuarios.Cadastrar",
+					"name": "Cadastrar",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -58,7 +59,7 @@
 					"response": []
 				},
 				{
-					"name": "Usuarios.ListarId",
+					"name": "ListarId",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -79,7 +80,7 @@
 					"response": []
 				},
 				{
-					"name": "Usuarios.Atualizar",
+					"name": "Atualizar",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -109,7 +110,7 @@
 					"response": []
 				},
 				{
-					"name": "Usuarios.Excluir",
+					"name": "Excluir",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -125,6 +126,36 @@
 								"usuarios",
 								"excluir",
 								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login",
+								"login"
 							]
 						}
 					},

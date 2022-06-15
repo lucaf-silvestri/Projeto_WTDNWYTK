@@ -52,11 +52,31 @@
             </summary>
             <returns>Lista de RegiaoHistorias</returns>
         </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoHistoriaRepository.Listarid(System.Int32)">
+            <summary>
+            Busca uma RegiaoHistoria através de seu id
+            </summary>
+            <param name="id">id da RegiaoHistoria buscada</param>
+            <returns>A RegiaoHistoria buscada</returns>
+        </member>
         <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoHistoriaRepository.Cadastrar(Projeto_WTDNWYTK.Domains.RegiaoHistorium)">
             <summary>
             Cadastra uma nova RegiaoHistoria
             </summary>
             <param name="novaRegiaoHistoria">Objeto novaRegiaoHistoria com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoHistoriaRepository.Atualizar(System.Int32,Projeto_WTDNWYTK.Domains.RegiaoHistorium)">
+            <summary>
+            Atualiza uma RegiaoHistoria existente passando o id pela URL da requisição
+            </summary>
+            <param name="idRegiaoHistoria">id da RegiaoHistoria que será atualizada</param>
+            <param name="RegiaoHistoriaAtualizada">Objeto RegiaoHistoriaAtualizada com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IRegiaoHistoriaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma RegiaoHistoria existente
+            </summary>
+            <param name="idRegiaoHistoria">id da RegiaoHistoria deletada</param>
         </member>
         <member name="T:Projeto_WTDNWYTK.Interfaces.IRegiaoRepository">
             <summary>
@@ -106,11 +126,31 @@
             </summary>
             <returns>Lista de TipoHistorias</returns>
         </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoHistoriaRepository.Listarid(System.Int32)">
+            <summary>
+            Busca um TipoHistoria através de seu id
+            </summary>
+            <param name="id">id do TipoHistoria buscado</param>
+            <returns>O TipoHistoria buscado</returns>
+        </member>
         <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoHistoriaRepository.Cadastrar(Projeto_WTDNWYTK.Domains.TipoHistorium)">
             <summary>
             Cadastra um novo TipoHistoria
             </summary>
             <param name="novoTipoHistoria">Objeto novoTipoHistoria com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoHistoriaRepository.Atualizar(System.Int32,Projeto_WTDNWYTK.Domains.TipoHistorium)">
+            <summary>
+            Atualiza um TipoHistoria existente passando o id pela URL da requisição
+            </summary>
+            <param name="idTipoHistoria">id do TipoHistoria que será atualizado</param>
+            <param name="TipoHistoriaAtualizado">Objeto TipoHistoriaAtualizado com os novos dados</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.ITipoHistoriaRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um TipoHistoria existente
+            </summary>
+            <param name="idTipoHistoria">id do TipoHistoria deletado</param>
         </member>
         <member name="T:Projeto_WTDNWYTK.Interfaces.ITipoRepository">
             <summary>
@@ -185,6 +225,14 @@
             Deleta um Usuario existente
             </summary>
             <param name="idUsuario">id do Usuario deletado</param>
+        </member>
+        <member name="M:Projeto_WTDNWYTK.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Busca um usuário através de seu email e senha
+            </summary>
+            <param name="email">Email do usuário buscado</param>
+            <param name="senha">Senha do usuário buscado</param>
+            <returns>Usuário buscado</returns>
         </member>
     </members>
 </doc>

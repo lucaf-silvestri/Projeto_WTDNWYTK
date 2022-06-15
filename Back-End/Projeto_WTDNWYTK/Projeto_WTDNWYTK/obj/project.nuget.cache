@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UTDv26sf9/jdvtPNaVynjC1UqIK/ptC6kbxWCnlebR0GFaiMFChG58/cNB/+ZwZ8mypmpNyC8CcesFzyEFTjkw==",
+  "dgSpecHash": "+M5qrZ9/nwGApxE4/xOBmq+D7Iq4Bf+Fgu+nW7/yKLxoY9nnwMNFGkETRlIiFzqrTZCsTEx7hphGikx7h4Mg4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\48395996888.INFOSCS\\Documents\\Batata\\Projeto_WTDNWYTK\\Back-End\\Projeto_WTDNWYTK\\Projeto_WTDNWYTK\\Projeto_WTDNWYTK.csproj",
+  "projectFilePath": "C:\\Users\\48395996888.INFOSCS\\Desktop\\Projeto_WTDNWYTK\\Back-End\\Projeto_WTDNWYTK\\Projeto_WTDNWYTK\\Projeto_WTDNWYTK.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\48395996888.INFOSCS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\48395996888.INFOSCS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.11\\microsoft.aspnetcore.authentication.jwtbearer.5.0.11.nupkg.sha512",

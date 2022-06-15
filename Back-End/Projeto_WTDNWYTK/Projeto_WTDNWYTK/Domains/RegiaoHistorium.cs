@@ -7,6 +7,7 @@ namespace Projeto_WTDNWYTK.Domains
 {
     public partial class RegiaoHistorium
     {
+        public short IdRegiaoHistoria { get; set; }
         public short IdHistoria { get; set; }
         public short IdRegiao { get; set; }
 

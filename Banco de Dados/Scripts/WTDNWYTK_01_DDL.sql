@@ -35,12 +35,14 @@ CREATE TABLE historia(
 go
 
 CREATE TABLE tipoHistoria(
+   idTipoHistoria smallint PRIMARY KEY IDENTITY(1,1),
    idHistoria smallint FOREIGN KEY REFERENCES historia(idHistoria) not null,
    idTipo smallint FOREIGN KEY REFERENCES tipo(idTipo) not null
 );
 go
 
 CREATE TABLE regiaoHistoria(
+   idRegiaoHistoria smallint PRIMARY KEY IDENTITY(1,1),
    idHistoria smallint FOREIGN KEY REFERENCES historia(idHistoria) not null,
    idRegiao smallint FOREIGN KEY REFERENCES regiao(idRegiao) not null
 );

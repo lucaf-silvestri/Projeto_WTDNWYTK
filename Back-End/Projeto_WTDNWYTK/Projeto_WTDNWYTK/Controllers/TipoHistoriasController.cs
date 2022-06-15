@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Projeto_WTDNWYTK.Domains;
 using Projeto_WTDNWYTK.Interfaces;
 using Projeto_WTDNWYTK.Repositories;
-using System;
-using System.Collections.Generic;
 
 namespace Projeto_WTDNWYTK.Controllers
 {
@@ -26,12 +26,59 @@ namespace Projeto_WTDNWYTK.Controllers
             return Ok(listaTipoHistorias);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            TipoHistorium TipoHistoriaBuscado = _TipoHistoriaRepository.Listarid(id);
+
+            if (TipoHistoriaBuscado == null)
+            {
+                return NotFound("Nenhuma TipoHistória encontrada.");
+            }
+
+            return Ok(TipoHistoriaBuscado);
+        }
+
         [HttpPost]
         public IActionResult Post(TipoHistorium novoTipoHistoria)
         {
             _TipoHistoriaRepository.Cadastrar(novoTipoHistoria);
 
             return StatusCode(201);
+        }
+
+        [HttpDelete("excluir/{id}")]
+        public IActionResult Delete(int id)
+        {
+            _TipoHistoriaRepository.Deletar(id);
+            return StatusCode(204);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, TipoHistorium TipoHistoriaAtualizado)
+        {
+            TipoHistorium TipoHistoriaBuscado = _TipoHistoriaRepository.Listarid(id);
+
+            if (TipoHistoriaBuscado == null)
+            {
+                return NotFound
+                    (new
+                    {
+                        mensagem = "TipoHistória não encontrada.",
+                        erro = true
+                    });
+            }
+
+            try
+            {
+                _TipoHistoriaRepository.Atualizar(id, TipoHistoriaAtualizado);
+
+                return NoContent();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
         }
     }
 }

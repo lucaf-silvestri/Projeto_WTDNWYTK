@@ -10,6 +10,21 @@ namespace Projeto_WTDNWYTK.Repositories
     {
         WTDNWYTKContext ctx = new WTDNWYTKContext();
 
+        public void Atualizar(int idTipoHistoria, TipoHistorium TipoHistoriaAtualizada)
+        {
+            TipoHistorium TipoHistoriaBuscada = Listarid(idTipoHistoria);
+
+            if (TipoHistoriaBuscada != null)
+            {
+                TipoHistoriaBuscada.IdTipo = TipoHistoriaAtualizada.IdTipo;
+                TipoHistoriaBuscada.IdHistoria = TipoHistoriaAtualizada.IdHistoria;
+            }
+
+            ctx.TipoHistoria.Update(TipoHistoriaBuscada);
+
+            ctx.SaveChanges();
+        }
+
         public void Cadastrar(TipoHistorium novaTipoHistoria)
         {
             ctx.TipoHistoria.Add(novaTipoHistoria);
@@ -17,28 +32,23 @@ namespace Projeto_WTDNWYTK.Repositories
             ctx.SaveChanges();
         }
 
+        public void Deletar(int idTipoHistoria)
+        {
+            TipoHistorium TipoHistoriaBuscada = Listarid(idTipoHistoria);
+
+            ctx.TipoHistoria.Remove(TipoHistoriaBuscada);
+
+            ctx.SaveChanges();
+        }
+
         public List<TipoHistorium> Listar()
         {
-            return ctx.TipoHistoria
-                .Select(c => new TipoHistorium
-                {
-                    IdTipo = c.IdTipo,
-                    IdHistoria = c.IdHistoria,
+            return ctx.TipoHistoria.ToList();
+        }
 
-                    IdTipoNavigation = new Tipo
-                    {
-                        NomeTipo = c.IdTipoNavigation.NomeTipo,
-                    },
-
-                    IdHistoriaNavigation = new Historium
-                    {
-                        IdUsuario = c.IdHistoriaNavigation.IdUsuario,
-                        Titulo = c.IdHistoriaNavigation.Titulo,
-                        Texto = c.IdHistoriaNavigation.Texto,
-                        Imagem1 = c.IdHistoriaNavigation.Imagem1,
-                        Imagem2 = c.IdHistoriaNavigation.Imagem2,
-                    }
-                }).ToList();
+        public TipoHistorium Listarid(int id)
+        {
+            return ctx.TipoHistoria.FirstOrDefault(c => c.IdTipoHistoria == id);
         }
     }
 }

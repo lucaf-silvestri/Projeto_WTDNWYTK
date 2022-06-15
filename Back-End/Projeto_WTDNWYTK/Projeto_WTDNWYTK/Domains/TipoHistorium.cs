@@ -7,6 +7,7 @@ namespace Projeto_WTDNWYTK.Domains
 {
     public partial class TipoHistorium
     {
+        public short IdTipoHistoria { get; set; }
         public short IdHistoria { get; set; }
         public short IdTipo { get; set; }
 

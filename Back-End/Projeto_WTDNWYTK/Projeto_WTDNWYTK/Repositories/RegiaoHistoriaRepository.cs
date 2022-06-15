@@ -10,6 +10,21 @@ namespace Projeto_WTDNWYTK.Repositories
     {
         WTDNWYTKContext ctx = new WTDNWYTKContext();
 
+        public void Atualizar(int idRegiaoHistoria, RegiaoHistorium RegiaoHistoriaAtualizada)
+        {
+            RegiaoHistorium RegiaoHistoriaBuscada = Listarid(idRegiaoHistoria);
+
+            if (RegiaoHistoriaBuscada != null)
+            {
+                RegiaoHistoriaBuscada.IdRegiao = RegiaoHistoriaAtualizada.IdRegiao;
+                RegiaoHistoriaBuscada.IdHistoria = RegiaoHistoriaAtualizada.IdHistoria;
+            }
+
+            ctx.RegiaoHistoria.Update(RegiaoHistoriaBuscada);
+
+            ctx.SaveChanges();
+        }
+
         public void Cadastrar(RegiaoHistorium novaRegiaoHistoria)
         {
             ctx.RegiaoHistoria.Add(novaRegiaoHistoria);
@@ -17,28 +32,23 @@ namespace Projeto_WTDNWYTK.Repositories
             ctx.SaveChanges();
         }
 
+        public void Deletar(int idRegiaoHistoria)
+        {
+            RegiaoHistorium RegiaoHistoriaBuscada = Listarid(idRegiaoHistoria);
+
+            ctx.RegiaoHistoria.Remove(RegiaoHistoriaBuscada);
+
+            ctx.SaveChanges();
+        }
+
         public List<RegiaoHistorium> Listar()
         {
-            return ctx.RegiaoHistoria
-                .Select(c => new RegiaoHistorium
-                {
-                    IdRegiao = c.IdRegiao,
-                    IdHistoria = c.IdHistoria,
+            return ctx.RegiaoHistoria.ToList();
+        }
 
-                    IdRegiaoNavigation = new Regiao
-                    {
-                        NomeRegiao = c.IdRegiaoNavigation.NomeRegiao,
-                    },
-
-                    IdHistoriaNavigation = new Historium
-                    {
-                        IdUsuario = c.IdHistoriaNavigation.IdUsuario,
-                        Titulo = c.IdHistoriaNavigation.Titulo,
-                        Texto = c.IdHistoriaNavigation.Texto,
-                        Imagem1 = c.IdHistoriaNavigation.Imagem1,
-                        Imagem2 = c.IdHistoriaNavigation.Imagem2,
-                    }
-                }).ToList();
+        public RegiaoHistorium Listarid(int id)
+        {
+            return ctx.RegiaoHistoria.FirstOrDefault(c => c.IdRegiaoHistoria == id);
         }
     }
 }
